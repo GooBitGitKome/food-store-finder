@@ -1,0 +1,17 @@
+[project]
+name = "food-store-finder-workspace"
+version = "0.1.0"
+description = "Food Store Finder Workspace"
+requires-python = ">=3.11"
+dependencies = [
+    "duckdb>=1.1.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.24.0",
+]
+
+[tool.uv.workspace]
+members = ["backend"]
