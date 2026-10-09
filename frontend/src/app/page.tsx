@@ -16,7 +16,8 @@ const MapComponent = dynamic(() => import("../components/MapComponent"), {
   ),
 });
 
-const API_BASE = process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:8000/api/v1";
+const rawApiBase = process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:8000/api/v1";
+const API_BASE = rawApiBase.replace(/\/+$/, "");
 
 export default function Home() {
   const [addressInput, setAddressInput] = useState("東京都港区麻布十番");

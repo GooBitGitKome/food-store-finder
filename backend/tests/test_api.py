@@ -6,10 +6,11 @@ from app.main import app
 async def test_health_endpoint():
     transport = ASGITransport(app=app)
     async with AsyncClient(transport=transport, base_url="http://test") as ac:
-        res = await ac.get("/api/v1/health")
-        assert res.status_code == 200
-        data = res.json()
-        assert data["status"] == "ok"
+        for path in ["/api/v1/health", "/v1/health", "/api/health", "/health"]:
+            res = await ac.get(path)
+            assert res.status_code == 200
+            data = res.json()
+            assert data["status"] == "ok"
 
 @pytest.mark.asyncio
 async def test_export_csv_endpoint():
