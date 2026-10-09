@@ -4,6 +4,17 @@
 
 ---
 
+## 🌐 公開デモサイト
+
+以下のリンクより、デモサイトを直接ブラウザでお試しいただけます：
+
+👉 **[https://food-store-finder.pages.dev/](https://food-store-finder.pages.dev/)**
+
+- **フロントエンド**: Cloudflare Pages
+- **バックエンド API**: Google Cloud Run (`asia-northeast1`)
+
+---
+
 ## 主な機能
 
 1. **柔軟な範囲指定 & 現在地取得**:
