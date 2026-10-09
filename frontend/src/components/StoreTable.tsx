@@ -320,7 +320,7 @@ export default function StoreTable({ stores, isLoading, onExportCsv }: StoreTabl
       </div>
 
       {/* テーブル本体 */}
-      <div className="flex-1 overflow-auto max-h-[500px]">
+      <div className="flex-1 overflow-auto max-h-[500px] lg:max-h-[580px] xl:max-h-[680px]">
         {isLoading ? (
           <div className="p-12 text-center text-slate-400">
             <div className="inline-block animate-spin rounded-full h-8 w-8 border-4 border-blue-500 border-t-transparent mb-3"></div>
@@ -336,7 +336,7 @@ export default function StoreTable({ stores, isLoading, onExportCsv }: StoreTabl
           <table className="w-full text-left text-xs">
             <thead className="bg-slate-50 text-slate-600 uppercase font-semibold sticky top-0 border-b border-slate-200 z-10">
               <tr>
-                <th className="py-2.5 px-3">店舗情報 / ジャンル</th>
+                <th className="py-2.5 px-3 min-w-[280px] sm:min-w-[340px] w-[340px]">店舗情報 / ジャンル</th>
                 <th className="py-2.5 px-3 whitespace-nowrap">Google Map誘導</th>
                 <th className="py-2.5 px-3">住所 / 所在地</th>
                 <th className="py-2.5 px-3 whitespace-nowrap">HP判定</th>
@@ -352,8 +352,8 @@ export default function StoreTable({ stores, isLoading, onExportCsv }: StoreTabl
 
                 return (
                   <tr key={store.id} className="hover:bg-blue-50/40 transition">
-                    {/* 店舗名 & 業態 & ジャンル */}
-                    <td className="py-3 px-3">
+                    {/* 店舗名 & 業態 & ジャンル (幅2倍) */}
+                    <td className="py-3 px-3 min-w-[280px] sm:min-w-[340px] w-[340px]">
                       <div className="flex flex-col gap-1">
                         <a
                           href={gmapsUrl}

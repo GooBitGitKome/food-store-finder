@@ -10,7 +10,7 @@ import { Search, MapPin, Sliders, Database, Building2, MailCheck, AlertCircle, C
 const MapComponent = dynamic(() => import("../components/MapComponent"), {
   ssr: false,
   loading: () => (
-    <div className="w-full h-[450px] lg:h-[540px] rounded-xl bg-slate-100 flex items-center justify-center text-slate-400 text-sm">
+    <div className="w-full h-[450px] lg:h-[580px] xl:h-[680px] rounded-xl bg-slate-100 flex items-center justify-center text-slate-400 text-sm">
       地図コンポーネントを読み込み中...
     </div>
   ),
@@ -162,7 +162,7 @@ export default function Home() {
   };
 
   return (
-    <main className="min-h-screen p-4 sm:p-6 lg:p-8 max-w-7xl mx-auto flex flex-col gap-6">
+    <main className="min-h-screen p-3 sm:p-5 lg:p-6 xl:p-8 w-full max-w-[98%] xl:max-w-[1920px] 2xl:max-w-[98%] mx-auto flex flex-col gap-6">
       {/* ヘッダー */}
       <header className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-4 border-b border-slate-200">
         <div>

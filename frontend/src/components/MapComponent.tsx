@@ -167,7 +167,7 @@ export default function MapComponent({ center, radius, stores, onPinChange }: Ma
   }, [stores]);
 
   return (
-    <div className="relative w-full h-[450px] lg:h-[540px] rounded-xl overflow-hidden border border-slate-200 shadow-inner">
+    <div className="relative w-full h-[450px] lg:h-[580px] xl:h-[680px] rounded-xl overflow-hidden border border-slate-200 shadow-inner">
       <div ref={mapContainerRef} className="w-full h-full" />
       <div className="absolute bottom-3 left-3 z-[1000] bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-lg text-xs font-medium text-slate-600 shadow border border-slate-200 flex items-center gap-3">
         <span className="flex items-center gap-1.5">
